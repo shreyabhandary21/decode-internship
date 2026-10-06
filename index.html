@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FocusFlow - a responsive frontend interface built with HTML, CSS and JavaScript.">
+  <title>FocusFlow | Responsive Frontend</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="FocusFlow home">FocusFlow</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#tasks">Tasks</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow">Simple. Responsive. Focused.</p>
+        <h1>Plan your day with clarity.</h1>
+        <p class="hero-text">
+          FocusFlow is a simple task interface designed to work smoothly on mobile,
+          tablet and desktop screens.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#tasks">Start planning</a>
+          <a class="button secondary" href="#features">Explore features</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Today's progress">
+        <span class="card-label">Today's progress</span>
+        <strong id="progress-value">0%</strong>
+        <div class="progress-track" aria-hidden="true">
+          <span id="progress-bar"></span>
+        </div>
+        <p id="progress-text">Add a task to get started.</p>
+      </aside>
+    </section>
+
+    <section id="features" class="section container">
+      <div class="section-heading">
+        <p class="eyebrow">Features</p>
+        <h2>Everything in one clean interface.</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="feature-number">01</span>
+          <h3>Quick tasks</h3>
+          <p>Add tasks without leaving the main screen.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-number">02</span>
+          <h3>Responsive layout</h3>
+          <p>Flexible Grid and Flexbox layouts adapt to screen size.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-number">03</span>
+          <h3>Simple interaction</h3>
+          <p>Use JavaScript to add, complete and remove tasks.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="tasks" class="section tasks-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Task board</p>
+          <h2>Today's priorities</h2>
+        </div>
+
+        <div class="task-layout">
+          <form id="task-form" class="task-form">
+            <label for="task-input">New task</label>
+            <div class="input-row">
+              <input id="task-input" name="task" type="text" maxlength="80"
+                     placeholder="e.g. Review project notes" required>
+              <button class="button primary" type="submit">Add task</button>
+            </div>
+          </form>
+
+          <div class="task-panel">
+            <div class="panel-top">
+              <h3>My tasks</h3>
+              <button id="clear-completed" class="text-button" type="button">Clear completed</button>
+            </div>
+            <ul id="task-list" class="task-list" aria-live="polite"></ul>
+            <p id="empty-state" class="empty-state">No tasks yet. Add your first priority.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section container contact">
+      <div>
+        <p class="eyebrow">Stay connected</p>
+        <h2>Build simple experiences that work everywhere.</h2>
+      </div>
+      <p>Designed as a frontend practice project using semantic HTML5, CSS3 and vanilla JavaScript.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> FocusFlow</p>
+      <p>Responsive Frontend Project</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
